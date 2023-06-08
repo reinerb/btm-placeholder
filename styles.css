@@ -1,0 +1,200 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  /* Colors */
+  --text-color-light: #282828;
+  --text-color-dark: #f8f8f8;
+
+  --body-bg-light: #f8f8f8;
+  --body-bg-dark: #663399;
+
+  --header-bg-light: #f0f0f0;
+  --header-bg-dark: #522a79;
+
+  --link-color-light: #006e8d;
+  --link-color-dark: #92fffd;
+
+  /* Utopia type scale */
+  --step--2: clamp(0.61rem, calc(0.58rem + 0.16vw), 0.72rem);
+  --step--1: clamp(0.73rem, calc(0.68rem + 0.24vw), 0.9rem);
+  --step-0: clamp(0.88rem, calc(0.8rem + 0.36vw), 1.13rem);
+  --step-1: clamp(1.05rem, calc(0.95rem + 0.51vw), 1.41rem);
+  --step-2: clamp(1.26rem, calc(1.12rem + 0.71vw), 1.76rem);
+  --step-3: clamp(1.51rem, calc(1.32rem + 0.98vw), 2.2rem);
+  --step-4: clamp(1.81rem, calc(1.55rem + 1.33vw), 2.75rem);
+  --step-5: clamp(2.18rem, calc(1.82rem + 1.79vw), 3.43rem);
+
+  /* Utopia space scale */
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.09vw), 0.31rem);
+  --space-2xs: clamp(0.44rem, calc(0.4rem + 0.18vw), 0.56rem);
+  --space-xs: clamp(0.69rem, calc(0.63rem + 0.27vw), 0.88rem);
+  --space-s: clamp(0.88rem, calc(0.8rem + 0.36vw), 1.13rem);
+  --space-m: clamp(1.31rem, calc(1.21rem + 0.54vw), 1.69rem);
+  --space-l: clamp(1.75rem, calc(1.61rem + 0.71vw), 2.25rem);
+  --space-xl: clamp(2.63rem, calc(2.41rem + 1.07vw), 3.38rem);
+  --space-2xl: clamp(3.5rem, calc(3.21rem + 1.43vw), 4.5rem);
+  --space-3xl: clamp(5.25rem, calc(4.82rem + 2.14vw), 6.75rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, calc(0.16rem + 0.45vw), 0.56rem);
+  --space-2xs-xs: clamp(0.44rem, calc(0.31rem + 0.63vw), 0.88rem);
+  --space-xs-s: clamp(0.69rem, calc(0.56rem + 0.63vw), 1.13rem);
+  --space-s-m: clamp(0.88rem, calc(0.64rem + 1.16vw), 1.69rem);
+  --space-m-l: clamp(1.31rem, calc(1.04rem + 1.34vw), 2.25rem);
+  --space-l-xl: clamp(1.75rem, calc(1.29rem + 2.32vw), 3.38rem);
+  --space-xl-2xl: clamp(2.63rem, calc(2.09rem + 2.68vw), 4.5rem);
+  --space-2xl-3xl: clamp(3.5rem, calc(2.57rem + 4.64vw), 6.75rem);
+
+  /* Custom pairs */
+  --space-m-2xl: clamp(1.31rem, calc(0.4rem + 4.55vw), 4.5rem);
+}
+
+body {
+  font-family: system-ui;
+  font-size: var(--step-0);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: var(--body-bg-light);
+}
+
+h1 {
+  font-size: var(--step-4);
+}
+
+h2 {
+  font-size: var(--step-2);
+  margin-bottom: var(--space-s);
+}
+
+a {
+  color: var(--link-color-light);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+header {
+  padding: var(--space-m) var(--space-l);
+  background-color: var(--header-bg-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+  text-align: center;
+}
+
+header > img {
+  max-width: 300px;
+}
+
+main {
+  max-width: 1440px;
+  margin-inline: auto;
+  margin-block: 1rem;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+p:not(:first-child) {
+  margin-top: var(--space-3xs);
+}
+
+li:not(:first-child) {
+  margin-top: var(--space-xs);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--body-bg-dark);
+    color: var(--text-color-dark);
+  }
+
+  header {
+    background-color: var(--header-bg-dark);
+  }
+
+  a {
+    color: var(--link-color-dark);
+  }
+}
