@@ -81,7 +81,7 @@ select {
   --body-bg-light: #f8f8f8;
   --body-bg-dark: #663399;
 
-  --header-bg-light: #f0f0f0;
+  --header-bg-light: white;
   --header-bg-dark: #522a79;
 
   --link-color-light: #006e8d;
@@ -148,7 +148,8 @@ a:hover {
   text-decoration: none;
 }
 
-.bold-text {
+.text-xl {
+  font-size: var(--step-2);
   font-weight: 700;
 }
 
@@ -177,11 +178,11 @@ main {
 }
 
 p:not(:first-child) {
-  margin-top: var(--space-3xs);
+  margin-top: var(--space-2xs);
 }
 
 li:not(:first-child) {
-  margin-top: var(--space-xs);
+  margin-top: var(--space-2xs);
 }
 
 @media (prefers-color-scheme: dark) {
