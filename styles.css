@@ -177,10 +177,7 @@ main {
   gap: var(--space-m);
 }
 
-p:not(:first-child) {
-  margin-top: var(--space-2xs);
-}
-
+p:not(:first-child),
 li:not(:first-child) {
   margin-top: var(--space-2xs);
 }
